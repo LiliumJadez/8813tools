@@ -4,6 +4,10 @@ import numpy as np
 import open3d as o3d
 from tqdm import tqdm
 
+
+
+np.set_printoptions(threshold=np.inf)
+
 def process_point_cloud(file_path):
     pcd = o3d.io.read_point_cloud(file_path)
     range_view_image = project_to_range_view(pcd)
